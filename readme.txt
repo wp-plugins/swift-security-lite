@@ -8,7 +8,7 @@ Stable tag: 1.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Swift Security is an incredible WordPress security plugin, which turns your WordPress site into a secure, "bulletproof" website, without modification of any of your files or directory structure.
+Swift Security is an incredible WordPress security plugin, which turns your WordPress site into a secure, "bulletproof" website.
 
 == Description ==
 
