@@ -614,7 +614,13 @@ class Settings{
 	public function SaveSettings($settings){
 		
 		$currentSettings = $this->GetSettings();
-						
+			
+
+		//Die if secure query is not defined or doesn't match with stored sq
+		if (!isset($_POST['sq']) || ($_POST['sq'] != $currentSettings['GlobalSettings']['sq'] && $_POST['sq'] != base64_encode($currentSettings['GlobalSettings']['sq']))){
+			return false;
+		}
+			
 		/*Hide Wordpress*/
 		if ($_POST['swift-security-settings-save'] == 'HideWP'){
 			$usedKeys = array();
@@ -955,6 +961,14 @@ class Settings{
 			die;
 		}
 		else if ($_POST['swift-security-exim'] == 'import-settings'){
+			//Get current settings
+			$currentSettings = $this->GetSettings();
+			
+			//Die if secure query is not defined or doesn't match with stored sq
+			if (!isset($_POST['sq']) || $_POST['sq'] != $currentSettings['GlobalSettings']['sq']){
+				return false;
+			}
+
 			$settings = ((isset($_FILES['swiftsecurity-import-settings']['tmp_name']) && !empty($_FILES['swiftsecurity-import-settings']['tmp_name'])) ? file_get_contents($_FILES['swiftsecurity-import-settings']['tmp_name']) : '');
 			/*Checkings*/ 
 			
