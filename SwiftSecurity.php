@@ -3,7 +3,7 @@
  * Plugin Name: Swift Security Lite
  * Plugin URI: http://swiftsecurity.swte.ch
  * Description: Hide the fact that you are using WordPress, enable a well-configurable, secure firewall, run scheduled code scans
- * Version: 1.2.2
+ * Version: 1.2.6
  * Author: SWTE
  * Author URI: http://swte.ch
  **/
@@ -12,7 +12,7 @@ class SwiftSecurity{
 	
 	private $InfoMessages = array(
 	  'Did you know that you can completely hide WordPress with Swift Security PRO version?',
-	  'Did you know that the PRO version can filter POST requests and malicious file uploads as well?',
+	  'Did you know that the Swift Security PRO version can filter POST requests and malicious file uploads as well?',
 	  'Did you know that Swift Security PRO version has 7/24 support?',
 	  'If you are using Swift Security PRO nobody can figure it out that you are using WordPress',
 	  'Did you know that Swift Security PRO has a built in Code Scanner?',
@@ -184,7 +184,7 @@ class SwiftSecurity{
 		
 		//Version number
 		if (!defined('SWIFTSECURITY_VERSION_NUM')){
-			define('SWIFTSECURITY_VERSION_NUM', '1.2.2');
+			define('SWIFTSECURITY_VERSION_NUM', '1.2.6');
 		}
 		
 		//Version number
